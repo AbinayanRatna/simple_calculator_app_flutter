@@ -31,7 +31,7 @@ class HomePage extends StatefulWidget {
 
 class HomePageState extends State<HomePage> {
   TextEditingController questionController = TextEditingController(text: "");
-  TextEditingController resultController = TextEditingController(text: "");
+  TextEditingController resultController = TextEditingController(text: "0");
   Parser p = Parser();
   ContextModel cm = ContextModel();
 
@@ -78,15 +78,21 @@ class HomePageState extends State<HomePage> {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: Padding(
-                        padding:  EdgeInsets.only(top:30.w),
-                        child: IconButton(onPressed: (){
-                          if(questionController.text.isNotEmpty){
-                            String question=questionController.text;
-                            int lengthOfQuestion=question.length;
-                            question = question.substring(0, lengthOfQuestion - 1);
-                            questionController.text=question;
-                          }
-                        }, icon: Icon(Icons.backspace_outlined,size: 30.sp,)),
+                        padding: EdgeInsets.only(top: 30.w),
+                        child: IconButton(
+                            onPressed: () {
+                              if (questionController.text.isNotEmpty) {
+                                String question = questionController.text;
+                                int lengthOfQuestion = question.length;
+                                question =
+                                    question.substring(0, lengthOfQuestion - 1);
+                                questionController.text = question;
+                              }
+                            },
+                            icon: Icon(
+                              Icons.backspace_outlined,
+                              size: 30.sp,
+                            )),
                       ),
                     )
                   ],
@@ -120,7 +126,7 @@ class HomePageState extends State<HomePage> {
                               child: GestureDetector(
                                 onTap: () {
                                   questionController.text =
-                                  "${questionController.text}7";
+                                      "${questionController.text}7";
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -148,7 +154,7 @@ class HomePageState extends State<HomePage> {
                               child: GestureDetector(
                                 onTap: () {
                                   questionController.text =
-                                  "${questionController.text}8";
+                                      "${questionController.text}8";
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -175,7 +181,7 @@ class HomePageState extends State<HomePage> {
                               child: GestureDetector(
                                 onTap: () {
                                   questionController.text =
-                                  "${questionController.text}9";
+                                      "${questionController.text}9";
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -201,14 +207,19 @@ class HomePageState extends State<HomePage> {
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
                               child: GestureDetector(
                                 onTap: () {
-                                  if(questionController.text.isNotEmpty){
-                                    String question=questionController.text;
-                                    int lengthOfQuestion=question.length;
-                                    if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
-                                      questionController.text="${questionController.text}/" ;
-                                    }else{
-                                      question = '${question.substring(0, lengthOfQuestion - 1)}/';
-                                      questionController.text=question;
+                                  if (questionController.text.isNotEmpty) {
+                                    String question = questionController.text;
+                                    int lengthOfQuestion = question.length;
+                                    if (question[lengthOfQuestion - 1] != '/' &&
+                                        question[lengthOfQuestion - 1] != 'x' &&
+                                        question[lengthOfQuestion - 1] != '-' &&
+                                        question[lengthOfQuestion - 1] != '+') {
+                                      questionController.text =
+                                          "${questionController.text}/";
+                                    } else {
+                                      question =
+                                          '${question.substring(0, lengthOfQuestion - 1)}/';
+                                      questionController.text = question;
                                     }
                                   }
                                 },
@@ -244,7 +255,7 @@ class HomePageState extends State<HomePage> {
                               child: GestureDetector(
                                 onTap: () {
                                   questionController.text =
-                                  "${questionController.text}4";
+                                      "${questionController.text}4";
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -271,7 +282,7 @@ class HomePageState extends State<HomePage> {
                               child: GestureDetector(
                                 onTap: () {
                                   questionController.text =
-                                  "${questionController.text}5";
+                                      "${questionController.text}5";
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -298,7 +309,7 @@ class HomePageState extends State<HomePage> {
                               child: GestureDetector(
                                 onTap: () {
                                   questionController.text =
-                                  "${questionController.text}6";
+                                      "${questionController.text}6";
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -324,14 +335,19 @@ class HomePageState extends State<HomePage> {
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
                               child: GestureDetector(
                                 onTap: () {
-                                  if(questionController.text.isNotEmpty){
-                                    String question=questionController.text;
-                                    int lengthOfQuestion=question.length;
-                                    if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
-                                      questionController.text="${questionController.text}x" ;
-                                    }else{
-                                      question = '${question.substring(0, lengthOfQuestion - 1)}x';
-                                      questionController.text=question;
+                                  if (questionController.text.isNotEmpty) {
+                                    String question = questionController.text;
+                                    int lengthOfQuestion = question.length;
+                                    if (question[lengthOfQuestion - 1] != '/' &&
+                                        question[lengthOfQuestion - 1] != 'x' &&
+                                        question[lengthOfQuestion - 1] != '-' &&
+                                        question[lengthOfQuestion - 1] != '+') {
+                                      questionController.text =
+                                          "${questionController.text}x";
+                                    } else {
+                                      question =
+                                          '${question.substring(0, lengthOfQuestion - 1)}x';
+                                      questionController.text = question;
                                     }
                                   }
                                 },
@@ -367,7 +383,7 @@ class HomePageState extends State<HomePage> {
                               child: GestureDetector(
                                 onTap: () {
                                   questionController.text =
-                                  "${questionController.text}1";
+                                      "${questionController.text}1";
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -394,7 +410,7 @@ class HomePageState extends State<HomePage> {
                               child: GestureDetector(
                                 onTap: () {
                                   questionController.text =
-                                  "${questionController.text}2";
+                                      "${questionController.text}2";
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -421,7 +437,7 @@ class HomePageState extends State<HomePage> {
                               child: GestureDetector(
                                 onTap: () {
                                   questionController.text =
-                                  "${questionController.text}3";
+                                      "${questionController.text}3";
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -447,14 +463,19 @@ class HomePageState extends State<HomePage> {
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
                               child: GestureDetector(
                                 onTap: () {
-                                  if(questionController.text.isNotEmpty){
-                                    String question=questionController.text;
-                                    int lengthOfQuestion=question.length;
-                                    if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
-                                      questionController.text="${questionController.text}-" ;
-                                    }else{
-                                      question = '${question.substring(0, lengthOfQuestion - 1)}-';
-                                      questionController.text=question;
+                                  if (questionController.text.isNotEmpty) {
+                                    String question = questionController.text;
+                                    int lengthOfQuestion = question.length;
+                                    if (question[lengthOfQuestion - 1] != '/' &&
+                                        question[lengthOfQuestion - 1] != 'x' &&
+                                        question[lengthOfQuestion - 1] != '-' &&
+                                        question[lengthOfQuestion - 1] != '+') {
+                                      questionController.text =
+                                          "${questionController.text}-";
+                                    } else {
+                                      question =
+                                          '${question.substring(0, lengthOfQuestion - 1)}-';
+                                      questionController.text = question;
                                     }
                                   }
                                 },
@@ -491,7 +512,7 @@ class HomePageState extends State<HomePage> {
                               child: GestureDetector(
                                 onTap: () {
                                   resultController.text = "0";
-                                  questionController.text="";
+                                  questionController.text = "";
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -514,10 +535,11 @@ class HomePageState extends State<HomePage> {
                           Expanded(
                             flex: 1,
                             child: Padding(
-                              padding:  EdgeInsets.only(left: 5.w, right: 5.w),
+                              padding: EdgeInsets.only(left: 5.w, right: 5.w),
                               child: GestureDetector(
                                 onTap: () {
-                                  questionController.text="${questionController.text}0" ;
+                                  questionController.text =
+                                      "${questionController.text}0";
                                 },
                                 child: Container(
                                   width: MediaQuery.of(context).size.width,
@@ -540,30 +562,47 @@ class HomePageState extends State<HomePage> {
                           Expanded(
                             flex: 1,
                             child: Padding(
-                              padding:  EdgeInsets.only(left: 5.w, right: 5.w),
+                              padding: EdgeInsets.only(left: 5.w, right: 5.w),
                               child: GestureDetector(
                                 onTap: () {
-                                  if((questionController.text).isNotEmpty){
-                                    try{
-                                      Expression exp = p.parse(questionController.text);
-                                      if ((exp.evaluate(EvaluationType.REAL, cm)).toString() == "Infinity"){
-                                        resultController.text= "Error";
-                                      }else{
-                                        double result = exp.evaluate(EvaluationType.REAL, cm);
+                                  if ((questionController.text).isNotEmpty) {
+                                    String questionFinal = "";
+                                    for (int i = 0;
+                                        i < (questionController.text).length;
+                                        i++) {
+                                      if ((questionController.text)[i] == "x") {
+                                        questionFinal = "${questionFinal}*";
+                                      } else {
+                                        questionFinal = questionFinal +
+                                            (questionController.text)[i];
+                                      }
+                                    }
+                                    try {
+                                      Expression exp = p.parse(questionFinal);
+                                      if ((exp.evaluate(
+                                                  EvaluationType.REAL, cm))
+                                              .toString() ==
+                                          "Infinity") {
+                                        resultController.text = "Error";
+                                      } else {
+                                        double result = exp.evaluate(
+                                            EvaluationType.REAL, cm);
 
                                         if (result == result.toInt()) {
-                                          resultController.text = result.toInt().toString();
+                                          resultController.text =
+                                              result.toInt().toString();
                                         } else {
-                                          resultController.text = result.toString();
+                                          resultController.text =
+                                              result.toString();
                                         }
-
                                       }
-                                    }catch(e){
-                                      resultController.text= "Error";
+                                    } catch (e) {
+                                      print("error : " + e.toString());
+                                      resultController.text = "Error";
                                       return;
                                     }
-                                  }else{
-                                    resultController.text="0";
+                                  } else {
+                                    resultController.text = "0";
                                   }
                                 },
                                 child: Container(
@@ -572,7 +611,6 @@ class HomePageState extends State<HomePage> {
                                   decoration: const BoxDecoration(
                                       color: Color.fromRGBO(211, 209, 209, 1.0),
                                       shape: BoxShape.circle),
-
                                   child: Center(
                                       child: Text(
                                     "=",
@@ -587,17 +625,22 @@ class HomePageState extends State<HomePage> {
                           Expanded(
                             flex: 1,
                             child: Padding(
-                              padding:  EdgeInsets.only(left: 5.w, right: 5.w),
+                              padding: EdgeInsets.only(left: 5.w, right: 5.w),
                               child: GestureDetector(
                                 onTap: () {
-                                  if(questionController.text.isNotEmpty){
-                                    String question=questionController.text;
-                                    int lengthOfQuestion=question.length;
-                                    if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
-                                      questionController.text="${questionController.text}+" ;
-                                    }else{
-                                      question = '${question.substring(0, lengthOfQuestion - 1)}+';
-                                      questionController.text=question;
+                                  if (questionController.text.isNotEmpty) {
+                                    String question = questionController.text;
+                                    int lengthOfQuestion = question.length;
+                                    if (question[lengthOfQuestion - 1] != '/' &&
+                                        question[lengthOfQuestion - 1] != 'x' &&
+                                        question[lengthOfQuestion - 1] != '-' &&
+                                        question[lengthOfQuestion - 1] != '+') {
+                                      questionController.text =
+                                          "${questionController.text}+";
+                                    } else {
+                                      question =
+                                          '${question.substring(0, lengthOfQuestion - 1)}+';
+                                      questionController.text = question;
                                     }
                                   }
                                 },
