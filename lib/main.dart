@@ -117,19 +117,19 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                  color: Color.fromRGBO(211, 209, 209, 1.0),
-                                  shape: BoxShape.circle,
-                                ),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    questionController.text =
-                                        "${questionController.text}7";
-                                  },
+                              child: GestureDetector(
+                                onTap: () {
+                                  questionController.text =
+                                  "${questionController.text}7";
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                    color: Color.fromRGBO(211, 209, 209, 1.0),
+                                    shape: BoxShape.circle,
+                                  ),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "7",
@@ -145,18 +145,18 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    questionController.text =
-                                        "${questionController.text}8";
-                                  },
+                              child: GestureDetector(
+                                onTap: () {
+                                  questionController.text =
+                                  "${questionController.text}8";
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "8",
@@ -172,18 +172,18 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    questionController.text =
-                                        "${questionController.text}9";
-                                  },
+                              child: GestureDetector(
+                                onTap: () {
+                                  questionController.text =
+                                  "${questionController.text}9";
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "9",
@@ -199,26 +199,26 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    if(questionController.text.isNotEmpty){
-                                      String question=questionController.text;
-                                      int lengthOfQuestion=question.length;
-                                      if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
-                                        questionController.text="${questionController.text}/" ;
-                                      }else{
-                                        question = '${question.substring(0, lengthOfQuestion - 1)}/';
-                                        questionController.text=question;
-                                      }
+                              child: GestureDetector(
+                                onTap: () {
+                                  if(questionController.text.isNotEmpty){
+                                    String question=questionController.text;
+                                    int lengthOfQuestion=question.length;
+                                    if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
+                                      questionController.text="${questionController.text}/" ;
+                                    }else{
+                                      question = '${question.substring(0, lengthOfQuestion - 1)}/';
+                                      questionController.text=question;
                                     }
-                                  },
+                                  }
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "/",
@@ -241,18 +241,18 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    questionController.text =
-                                        "${questionController.text}4";
-                                  },
+                              child: GestureDetector(
+                                onTap: () {
+                                  questionController.text =
+                                  "${questionController.text}4";
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "4",
@@ -268,18 +268,18 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    questionController.text =
-                                        "${questionController.text}5";
-                                  },
+                              child: GestureDetector(
+                                onTap: () {
+                                  questionController.text =
+                                  "${questionController.text}5";
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "5",
@@ -295,18 +295,18 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    questionController.text =
-                                        "${questionController.text}6";
-                                  },
+                              child: GestureDetector(
+                                onTap: () {
+                                  questionController.text =
+                                  "${questionController.text}6";
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "6",
@@ -322,26 +322,26 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    if(questionController.text.isNotEmpty){
-                                      String question=questionController.text;
-                                      int lengthOfQuestion=question.length;
-                                      if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
-                                        questionController.text="${questionController.text}x" ;
-                                      }else{
-                                        question = '${question.substring(0, lengthOfQuestion - 1)}x';
-                                        questionController.text=question;
-                                      }
+                              child: GestureDetector(
+                                onTap: () {
+                                  if(questionController.text.isNotEmpty){
+                                    String question=questionController.text;
+                                    int lengthOfQuestion=question.length;
+                                    if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
+                                      questionController.text="${questionController.text}x" ;
+                                    }else{
+                                      question = '${question.substring(0, lengthOfQuestion - 1)}x';
+                                      questionController.text=question;
                                     }
-                                  },
+                                  }
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "x",
@@ -364,18 +364,18 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    questionController.text =
-                                        "${questionController.text}1";
-                                  },
+                              child: GestureDetector(
+                                onTap: () {
+                                  questionController.text =
+                                  "${questionController.text}1";
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "1",
@@ -391,18 +391,18 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    questionController.text =
-                                        "${questionController.text}2";
-                                  },
+                              child: GestureDetector(
+                                onTap: () {
+                                  questionController.text =
+                                  "${questionController.text}2";
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "2",
@@ -418,18 +418,18 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    questionController.text =
-                                        "${questionController.text}3";
-                                  },
+                              child: GestureDetector(
+                                onTap: () {
+                                  questionController.text =
+                                  "${questionController.text}3";
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "3",
@@ -445,26 +445,26 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    if(questionController.text.isNotEmpty){
-                                      String question=questionController.text;
-                                      int lengthOfQuestion=question.length;
-                                      if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
-                                        questionController.text="${questionController.text}-" ;
-                                      }else{
-                                        question = '${question.substring(0, lengthOfQuestion - 1)}-';
-                                        questionController.text=question;
-                                      }
+                              child: GestureDetector(
+                                onTap: () {
+                                  if(questionController.text.isNotEmpty){
+                                    String question=questionController.text;
+                                    int lengthOfQuestion=question.length;
+                                    if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
+                                      questionController.text="${questionController.text}-" ;
+                                    }else{
+                                      question = '${question.substring(0, lengthOfQuestion - 1)}-';
+                                      questionController.text=question;
                                     }
-                                  },
+                                  }
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                     child: Text(
                                       "-",
@@ -488,18 +488,18 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding: EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    resultController.text = "0";
-                                    questionController.text="";
-                                  },
+                              child: GestureDetector(
+                                onTap: () {
+                                  resultController.text = "0";
+                                  questionController.text="";
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
                                   child: Center(
                                       child: Text(
                                     "C",
@@ -515,18 +515,18 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding:  EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    questionController.text="${questionController.text}0" ;
-                                  },
-                                  child:  Center(
+                              child: GestureDetector(
+                                onTap: () {
+                                  questionController.text="${questionController.text}0" ;
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
+                                  child: Center(
                                       child: Text(
                                     "0",
                                     style: TextStyle(
@@ -541,39 +541,39 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding:  EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-
-                                child: GestureDetector(
-                                  onTap: () {
-                                    if((questionController.text).isNotEmpty){
-                                      try{
-                                        Expression exp = p.parse(questionController.text);
-                                        if ((exp.evaluate(EvaluationType.REAL, cm)).toString() == "Infinity"){
-                                          resultController.text= "Error";
-                                        }else{
-                                          double result = exp.evaluate(EvaluationType.REAL, cm);
-
-                                          if (result == result.toInt()) {
-                                            resultController.text = result.toInt().toString();
-                                          } else {
-                                            resultController.text = result.toString();
-                                          }
-
-                                        }
-                                      }catch(e){
+                              child: GestureDetector(
+                                onTap: () {
+                                  if((questionController.text).isNotEmpty){
+                                    try{
+                                      Expression exp = p.parse(questionController.text);
+                                      if ((exp.evaluate(EvaluationType.REAL, cm)).toString() == "Infinity"){
                                         resultController.text= "Error";
-                                        return;
+                                      }else{
+                                        double result = exp.evaluate(EvaluationType.REAL, cm);
+
+                                        if (result == result.toInt()) {
+                                          resultController.text = result.toInt().toString();
+                                        } else {
+                                          resultController.text = result.toString();
+                                        }
+
                                       }
-                                    }else{
-                                      resultController.text="0";
+                                    }catch(e){
+                                      resultController.text= "Error";
+                                      return;
                                     }
-                                  },
-                                  child:  Center(
+                                  }else{
+                                    resultController.text="0";
+                                  }
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+
+                                  child: Center(
                                       child: Text(
                                     "=",
                                     style: TextStyle(
@@ -588,27 +588,27 @@ class HomePageState extends State<HomePage> {
                             flex: 1,
                             child: Padding(
                               padding:  EdgeInsets.only(left: 5.w, right: 5.w),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width,
-                                height: MediaQuery.of(context).size.height,
-                                decoration: const BoxDecoration(
-                                    color: Color.fromRGBO(211, 209, 209, 1.0),
-                                    shape: BoxShape.circle),
-                                //borderRadius: BorderRadius.circular(50)),
-                                child: GestureDetector(
-                                  onTap: () {
-                                    if(questionController.text.isNotEmpty){
-                                      String question=questionController.text;
-                                      int lengthOfQuestion=question.length;
-                                      if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
-                                        questionController.text="${questionController.text}+" ;
-                                      }else{
-                                        question = '${question.substring(0, lengthOfQuestion - 1)}+';
-                                        questionController.text=question;
-                                      }
+                              child: GestureDetector(
+                                onTap: () {
+                                  if(questionController.text.isNotEmpty){
+                                    String question=questionController.text;
+                                    int lengthOfQuestion=question.length;
+                                    if(question[lengthOfQuestion-1] != '/' && question[lengthOfQuestion-1] != 'x' && question[lengthOfQuestion-1] != '-' && question[lengthOfQuestion-1] != '+'  ){
+                                      questionController.text="${questionController.text}+" ;
+                                    }else{
+                                      question = '${question.substring(0, lengthOfQuestion - 1)}+';
+                                      questionController.text=question;
                                     }
-                                  },
-                                  child:  Center(
+                                  }
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,
+                                  decoration: const BoxDecoration(
+                                      color: Color.fromRGBO(211, 209, 209, 1.0),
+                                      shape: BoxShape.circle),
+                                  //borderRadius: BorderRadius.circular(50)),
+                                  child: Center(
                                       child: Text(
                                     "+",
                                     style: TextStyle(
